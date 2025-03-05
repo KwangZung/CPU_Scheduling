@@ -22,13 +22,13 @@ Nguyễn Quang Dũng - 23021497
           code
 2. Quy định đầu ra
     Gồm có:
-       - Thời gian chờ trung bình
-       - Thời gian hoàn thành trung bình
-       - Thời gian phản hồi trung bình
-       - Biểu đồ Gantt:
+   - Thời gian chờ trung bình
+   - Thời gian hoàn thành trung bình
+   - Thời gian phản hồi trung bình
+   - Biểu đồ Gantt:
           + 2 kiểu: Chữ & Bảng
           + Với kiểu chữ: nếu CPU idle, idl à 0
-3. Minh họa
+4. Minh họa
     a) Đầu vào:
 
 ```
@@ -38,21 +38,20 @@ id, Thời gian đến, Thời gian chạy, Số hiệu ưu tiên, Hàng đợi
 3, 5, 2, 1, 1.
 4, 6, 4, 1, 2.
 ```
-```
 + Hàng đợi 1 sẽ được thực hiện theo thuật toán 2 (SJF NP)
 + Hàng đợi 2 sẽ được thực hiện theo thuật toán 1 (FCFS)
 + Hàng đợi 1 sẽ được thực hiện trước hàng đợi 2
-```
 
 b) Các bước sử dụng
 
 - Bước 1: Chọn vào tab “Thuật toán lập lịch”
+  ![alt text](https://github.com/KwangZung/CPU_Scheduling/blob/main/demoImages/Screenshot%202025-03-05%20151413.jpg)
 - Bước 2: Chọn loại thuật toán “Hàng đợi đa cấp”
+  ![alt text](https://github.com/KwangZung/CPU_Scheduling/blob/main/demoImages/Screenshot%202025-03-05%20151507.jpg)
 - Bước 3: Chọn file đầu vào đã được tạo từ trước:
-
-
+![alt text](https://github.com/KwangZung/CPU_Scheduling/blob/main/demoImages/Screenshot%202025-03-05%20151542.jpg)
 - Bước 4: Bấm “Thực thi” để cho ra kết quả:
-
+![alt text](https://github.com/KwangZung/CPU_Scheduling/blob/main/demoImages/Screenshot%202025-03-05%20151615.jpg)
 c) Đầu ra:
 Thời gian hoàn thành TB: 6.
 Thời gian chờ TB: 2.
