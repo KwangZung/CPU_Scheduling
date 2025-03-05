@@ -51,9 +51,9 @@ b) Các bước sử dụng
 - Bước 4: Bấm “Thực thi” để cho ra kết quả:
 ![alt text](https://github.com/KwangZung/CPU_Scheduling/blob/main/demoImages/Screenshot%202025-03-05%20151615.jpg)
 c) Đầu ra:
-- Thời gian hoàn thành TB: 6.
-- Thời gian chờ TB: 2.
-- Thời gian phản hồi TB: 2.
+- Thời gian hoàn thành TB: 6
+- Thời gian chờ TB: 2.5
+- Thời gian phản hồi TB: 2.5
 - Biểu đồ Gantt: 1[0 - 2], 0[2 - 4], 2[4 - 10], 3[10 - 12], 4[12 - 16]
 
 
