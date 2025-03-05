@@ -1,7 +1,7 @@
 body {
     font-family: Arial, sans-serif;
-    text-align: center;
     margin: 20px;
+    text-align: center;
 }
 button {
     padding: 10px 15px;
@@ -38,13 +38,17 @@ button {
 }
 
 .gantt-container {
-    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Căn giữa Gantt Chart */
     width: 700px;
+    margin: 20px auto; /* Giữ nguyên căn giữa ngang */
 }
 .gantt {
     display: flex;
     border: 2px solid black;
     height: 60px;
+    width: 100%;
     position: relative;
 }
 .task {
@@ -55,3 +59,18 @@ button {
     font-weight: bold;
     height: 100%;
 }
+
+.timeline {
+    display: flex;
+    position: relative;
+    width: 100%;
+    margin-top: 5px;
+}
+
+.timeline div {
+    position: absolute;
+    bottom: -20px;
+    font-size: 14px;
+    transform: translateX(-50%);
+}
+
