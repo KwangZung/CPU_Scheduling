@@ -59,9 +59,48 @@ function execute(text, typeOfScheduling) {
         algoND.innerHTML = "Algorithm has't been defined. Sorry";
     }
     console.log(processes);
+    drawGanttChart(gantt);
     return ("Thời gian hoàn thành TB: " + getAvgCompletionTime(processes) + "\nThời gian chờ TB: " + getAvgWaitingTime(processes)
         + "\nThời gian phản hồi TB: " + getAvgRespondTime(processes) + "\nBiểu đồ Gantt: " + gantt).replace(/\n/g, "<br>");
 }
+
+function drawGanttChart(data) {
+    const container = document.getElementById("gantt");
+    const timeline = document.getElementById("timeline");
+    container.innerHTML = "";
+    timeline.innerHTML = "";
+
+    const totalTime = data[data.length - 1].end; // Tổng thời gian chạy
+    data.forEach(session => {
+        const duration = session.end - session.start;
+        const widthPercent = (duration / totalTime) * 100;
+
+        // Xác định class dựa trên process ID
+        let processClass = session.process.id === 0 ? "idle" : `p${session.process.id}`;
+
+        // Tạo ô tiến trình
+        const taskDiv = document.createElement("div");
+        taskDiv.className = `task ${processClass}`;
+        taskDiv.style.width = `${widthPercent}%`;
+        taskDiv.textContent = session.process.id === 0 ? "IDLE" : `P${session.process.id}`;
+        container.appendChild(taskDiv);
+
+        // Thêm mốc thời gian dưới mỗi tiến trình
+        const timeMarker = document.createElement("div");
+        timeMarker.textContent = session.start;
+        timeMarker.style.left = `${(session.start / totalTime) * 100}%`;
+        timeline.appendChild(timeMarker);
+    });
+
+    // Thêm mốc thời gian cuối cùng
+    const endTimeMarker = document.createElement("div");
+    endTimeMarker.textContent = totalTime;
+    endTimeMarker.style.left = "100%";
+    timeline.appendChild(endTimeMarker);
+}
+
+
+// --------------------------------------------------------------
 
 class Process {
     constructor(id, arrivalTime, burstTime, priorityId, readyQueueId) {

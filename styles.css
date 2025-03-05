@@ -36,3 +36,22 @@ button {
 .content {
     display: none;
 }
+
+.gantt-container {
+    font-family: Arial, sans-serif;
+    width: 700px;
+}
+.gantt {
+    display: flex;
+    border: 2px solid black;
+    height: 60px;
+    position: relative;
+}
+.task {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid black;
+    font-weight: bold;
+    height: 100%;
+}
