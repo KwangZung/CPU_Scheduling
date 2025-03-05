@@ -1,6 +1,4 @@
-# BÁO CÁO THUẬT TOÁN LẬP LỊCH
-
-# HÀNG ĐỢI ĐA CẤP
+# BÁO CÁO THUẬT TOÁN LẬP LỊCH HÀNG ĐỢI ĐA CẤP
 
 ```
 Nguyễn Quang Dũng - 23021497
